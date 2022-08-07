@@ -59,7 +59,7 @@ init();
 // 초기 화면 셋팅
 function init() {
   // 초기 블럭값 셋팅
-  // movinItem의 값만을 가져와서 사용함. movingItem의 값이 변경되는 것과 무관하게 사용하기 위함
+  // movingItem의 값만을 가져와서 사용함. movingItem의 값이 변경되는 것과 무관하게 사용하기 위함
   // 스프레드 오퍼레이터 사용{...var}
   gameText.style.display = 'none';
   tempMovingItem = { ...movingItem };
@@ -85,7 +85,7 @@ function prependMatrix() {
 
 // 블럭 그리는 함수
 function renderBlocks(moveType = "") {
-  // 디스트럭쳐링으로 tmepmovinItem 내의 프러퍼티를 바로 변수처럼 사용
+  // 디스트럭쳐링으로 tmepmovingItem 내의 프러퍼티를 바로 변수처럼 사용
   const { type, direction, top, left } = tempMovingItem;
   const movingBlocks = document.querySelectorAll(".moving");
   movingBlocks.forEach((moving) => {
